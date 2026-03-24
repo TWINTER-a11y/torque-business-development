@@ -1,13 +1,4 @@
 :root {
-  display: grid;
-  gap: 14px;
-}
-
-.contact-item {
-  padding: 14px 16px;
-  border-radius: 14px;
-  background: rgba(255,255,255,0.025);
-  border: 1px solid rgba(255,255,255,0.06);
 }
 
 .contact-item span {
