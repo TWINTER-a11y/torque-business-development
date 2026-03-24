@@ -61,16 +61,17 @@ img {
 /* HERO / BANNER */
 
 .hero {
-  height: 500px;
+  height: 620px;
   background:
-    linear-gradient(rgba(0, 0, 0, 0.42), rgba(0, 0, 0, 0.62)),
+    linear-gradient(rgba(0, 0, 0, 0.30), rgba(0, 0, 0, 0.48)),
     url("banner-with-logo.png");
   background-size: cover;
-  background-position: center;
+  background-position: center 38%;
   background-repeat: no-repeat;
   position: relative;
   display: flex;
   align-items: flex-start;
+  overflow: hidden;
 }
 
 /* NAVIGATION IN BANNER */
@@ -82,6 +83,8 @@ img {
   align-items: center;
   padding: 30px 60px;
   color: white;
+  position: relative;
+  z-index: 3;
 }
 
 .nav-left {
@@ -120,6 +123,24 @@ img {
   height: 2px;
   background: var(--accent);
   border-radius: 999px;
+}
+
+/* EXTRA LOGO ABOVE TORQUE */
+
+.hero-logo-wrap {
+  position: absolute;
+  left: 50%;
+  top: 45%;
+  transform: translateX(-50%);
+  z-index: 2;
+  pointer-events: none;
+}
+
+.hero-logo {
+  width: 86px;
+  height: auto;
+  filter: drop-shadow(0 6px 18px rgba(0, 0, 0, 0.35));
+  opacity: 0.98;
 }
 
 /* CONTENT */
@@ -425,11 +446,20 @@ section {
   .nav {
     padding: 26px 30px;
   }
+
+  .hero {
+    height: 560px;
+  }
+
+  .hero-logo-wrap {
+    top: 44%;
+  }
 }
 
 @media (max-width: 920px) {
   .hero {
-    height: 420px;
+    height: 500px;
+    background-position: center 34%;
   }
 
   .nav {
@@ -456,6 +486,14 @@ section {
   h1 {
     max-width: none;
   }
+
+  .hero-logo {
+    width: 72px;
+  }
+
+  .hero-logo-wrap {
+    top: 43%;
+  }
 }
 
 @media (max-width: 640px) {
@@ -464,8 +502,8 @@ section {
   }
 
   .hero {
-    height: 340px;
-    background-position: center;
+    height: 420px;
+    background-position: center 30%;
   }
 
   .content,
@@ -490,5 +528,13 @@ section {
 
   .footer-left {
     align-items: flex-start;
+  }
+
+  .hero-logo {
+    width: 58px;
+  }
+
+  .hero-logo-wrap {
+    top: 42%;
   }
 }
