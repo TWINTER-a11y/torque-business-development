@@ -141,17 +141,29 @@ p {
   background: var(--accent);
 }
 
+/* LOGO BLOK */
+
 .hero-brand {
   position: absolute;
   top: 58%;
   left: 50%;
   transform: translate(-50%, -50%);
-  text-align: center;
   z-index: 2;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  width: max-content;
+  max-width: 90vw;
+  margin: 0 auto;
 }
 
 .hero-logo-graphic,
 .hero-logo-text {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
   background: transparent;
   mix-blend-mode: normal;
   filter: drop-shadow(0 6px 16px rgba(0, 0, 0, 0.28));
@@ -160,6 +172,8 @@ p {
 .hero-logo-graphic {
   width: 180px;
   margin-bottom: 8px;
+  position: relative;
+  left: 12px;
 }
 
 .hero-logo-text {
@@ -457,6 +471,8 @@ p {
   .hero-logo-graphic {
     width: 96px;
     margin-bottom: 6px;
+    position: relative;
+    left: 6px;
   }
 
   .hero-logo-text {
@@ -494,10 +510,6 @@ p {
 
   .hero {
     min-height: 200px;
-    background-size: contain;
-    background-position: center center;
-    background-repeat: no-repeat;
-    background-color: #0b1624;
   }
 
   .nav {
@@ -524,6 +536,8 @@ p {
   .hero-logo-graphic {
     width: 82px;
     margin-bottom: 4px;
+    position: relative;
+    left: 5px;
   }
 
   .hero-logo-text {
